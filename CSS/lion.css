@@ -433,8 +433,19 @@ html{
   color: #334752;
   text-transform: capitalize;
 }
+.contact .info .social a{
+  color: #334752;
+}
 .contact .info .social i{
   margin-left: 10px;
+  transition: 0.1s;
+  -webkit-transition: 0.1s;
+  -moz-transition: 0.1s;
+  -ms-transition: 0.1s;
+  -o-transition: 0.1s;
+}
+.contact .info .social i:hover{
+  color: var(--main-color);
 }
 @media (max-width: 767px) {
   .contact .info{
