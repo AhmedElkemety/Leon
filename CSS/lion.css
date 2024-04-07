@@ -3,10 +3,10 @@
   --main-color: #10cab7;
   --second-color: #435864;
   --p-color: #575757;
-  --special-Heading1: #f6f6f6;
-  --special-Heading2: #ebeced;
+  --special-Heading1: #eee;
+  --special-Heading2: #ccc;
   --section-padding: 60px;
-  --back-color: #fafafa;
+  --back-color: #ddd;
   --transition: 0.3s;
 }
 /* End Variables */
