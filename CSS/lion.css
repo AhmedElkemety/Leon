@@ -18,7 +18,7 @@
 body {
   font-family: "Work Sans", sans-serif;
 }
-html{
+html {
   scroll-behavior: smooth;
 }
 .container {
@@ -82,8 +82,18 @@ html{
 .header .links {
   position: relative;
 }
-.header .links:hover .icon span:nth-child(2) {
-  width: 100%;
+.header .links:hover .icon span:nth-child(2){
+  display: none;
+}
+.header .links:hover .icon span:nth-child(1){
+  rotate: 45deg;
+  transition-duration: 1s;
+  background-color: var(--main-color);
+}
+.header .links:hover .icon span:nth-child(3){
+  rotate: -45deg;
+  transition-duration: 1s;
+  background-color: var(--main-color);
 }
 .header .links .icon {
   width: 30px;
@@ -133,17 +143,26 @@ html{
 }
 .header .links:hover ul {
   display: block;
+  border: 3px solid var(--main-color);
+  border-radius: 12px;
+  animation-name:move-padding-color;
+  animation-iteration-count: infinite;
+  animation-duration: .3s;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
 }
 .header .links ul li a {
   display: block;
   padding: 15px;
   text-decoration: none;
   color: var(--second-color);
-  transition:var(--transition);
-  -webkit-transition:var(--transition);
-  -moz-transition:var(--transition);
-  -ms-transition:var(--transition);
-  -o-transition:var(--transition);
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
 }
 .header .links ul li a:hover {
   padding-left: 25px;
@@ -231,6 +250,37 @@ html{
   display: flex;
   margin-bottom: 20px;
 }
+.services .services-content .col .srv:hover {
+  scale: 1.1;
+  padding: 5px;
+  transition-duration: 1s;
+  border: 3px solid var(--main-color);
+  animation-name:move-padding-color;
+  animation-duration: .3s;
+  animation-iteration-count: infinite;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+}
+@keyframes move-padding-color {
+  0% {
+    border-color: var(--main-color) transparent transparent transparent ;
+  }
+  25% {
+    border-color: transparent var(--main-color) transparent  transparent ;
+  }
+  50% {
+    border-color: transparent transparent  var(--main-color) transparent ;
+  }
+  75% {
+    border-color: transparent transparent transparent var(--main-color) ;
+  }
+  100% {
+    border-color:var(--main-color) transparent  transparent transparent ;
+  }
+}
 @media (max-width: 767px) {
   .services .services-content .col .srv {
     flex-direction: column;
@@ -300,8 +350,14 @@ html{
   -moz-transition: 0.5s ease;
   -ms-transition: 0.5s ease;
   -o-transition: 0.5s ease;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+  overflow: hidden;
 }
-.portfolio .card:hover{
+.portfolio .card:hover {
   scale: 112%;
 }
 .portfolio .card img {
@@ -326,7 +382,7 @@ html{
 /* End Portofolio */
 /* Start About */
 .About {
-  padding: var(--section-padding) 0;
+  padding: 60px 0 0 0;
 }
 .About .special-Heading {
   color: var(--special-Heading1);
@@ -415,7 +471,6 @@ html{
 }
 .contact .info {
   padding: var(--section-padding) 0;
-  /* text-align: center; */
 }
 .contact .info .label {
   font-size: 55px;
@@ -441,10 +496,10 @@ html{
   color: #334752;
   text-transform: capitalize;
 }
-.contact .info .social a{
+.contact .info .social a {
   color: #334752;
 }
-.contact .info .social i{
+.contact .info .social i {
   margin-left: 10px;
   transition: 0.1s;
   -webkit-transition: 0.1s;
@@ -452,21 +507,21 @@ html{
   -ms-transition: 0.1s;
   -o-transition: 0.1s;
 }
-.contact .info .social i:hover{
+.contact .info .social i:hover {
   color: var(--main-color);
 }
 @media (max-width: 767px) {
-  .contact .info{
+  .contact .info {
     text-align: center;
   }
-  .contact .info .label{
+  .contact .info .label {
     font-size: 25px;
   }
-  .contact .info .link{
+  .contact .info .link {
     font-size: 25px;
     text-indent: 0;
   }
-  .contact .info .social{
+  .contact .info .social {
     font-size: 10px;
     text-indent: 0;
     margin-left: auto 0;
@@ -474,17 +529,15 @@ html{
 }
 /* End Contact */
 /* Start Footer */
-footer{
+footer {
   text-align: center;
   background-color: #334752;
   padding: 50px 0;
   color: white;
   font-size: 15px;
   font-weight: 800;
-  position: relative;
-  bottom: -70px;
 }
-footer span{
-  color:var(--main-color);
+footer span {
+  color: var(--main-color);
 }
 /* End Footer */
