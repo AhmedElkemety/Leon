@@ -511,6 +511,9 @@ html {
   color: var(--main-color);
 }
 @media (max-width: 767px) {
+  .container {
+    margin: 0 20px;
+  }
   .contact .info {
     text-align: center;
   }
